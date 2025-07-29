@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 
 import queryRoutes from './routes/query.routes.js';
+import authRoutes from './routes/auth.routes.js';
 
 dotenv.config();
 
@@ -16,6 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use('/api/queries', queryRoutes);
+app.use('/api/auth', authRoutes);
 
 // Default route
 app.get('/', (req, res) => {
