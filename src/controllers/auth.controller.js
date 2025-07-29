@@ -2,8 +2,6 @@ import { nanoid } from 'nanoid';
 import bcrypt from 'bcryptjs';
 import { prisma } from '../../db.config.js';
 
-const prisma = new PrismaClient();
-
 // 📌 Register User
 export const register = async (req, res) => {
     const { email, password, name } = req.body;
