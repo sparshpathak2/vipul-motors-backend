@@ -1,5 +1,6 @@
+import { nanoid } from 'nanoid';
 import bcrypt from 'bcryptjs';
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '../../db.config.js';
 
 const prisma = new PrismaClient();
 
@@ -19,7 +20,7 @@ export const register = async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, 10);
 
         const user = await prisma.user.create({
-            data: { email, password: hashedPassword, name },
+            data: { id: nanoid(8), email, password: hashedPassword, name },
         });
 
         res.status(201).json({
