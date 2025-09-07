@@ -7,6 +7,7 @@ import authRoutes from './routes/auth.routes.js';
 import userRoutes from './routes/user.routes.js';
 import uploadRoutes from './routes/upload.routes.js';
 import mediaRoutes from './routes/media.routes.js';
+import truevalueRoutes from './routes/truevalue.routes.js';
 
 dotenv.config();
 
@@ -37,6 +38,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/media', mediaRoutes);
 app.use('/api/upload', uploadRoutes);
+app.use('/api/true-value', truevalueRoutes);
 
 // Default route
 app.get('/', (req, res) => {
