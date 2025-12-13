@@ -4,7 +4,8 @@ module.exports = {
             name: "vipul-motors-server",
 
             script: "src/index.js",
-            cwd: "/home/ubuntu/vipul-motors/vipul-motors-backend",
+            // cwd: "/home/ubuntu/vipul-motors/vipul-motors-backend",
+            cwd: "/home/ubuntu/vipul-motors-backend",
 
             // ---- Security ----
             watch: false,
